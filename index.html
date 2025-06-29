@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brasil Digital - Inovação e Tecnologia</title>
+    <meta
+      name="description"
+      content="Plataforma brasileira de inovação e tecnologia com experiência 3D interativa"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+      <div class="spinner" aria-label="Carregando"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">Brasil Digital</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#estatisticas">Estatísticas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          ☰
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <canvas id="canvas3d"></canvas>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Inovação Brasileira em 3D</h1>
+          <p>
+            Explore o futuro da tecnologia com nossa plataforma interativa. Uma
+            experiência imersiva que conecta criatividade e inovação em um
+            ambiente totalmente brasileiro.
+          </p>
+          <div class="cta-buttons">
+            <a href="#recursos" class="btn btn-primary">Explorar Recursos</a>
+            <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="recursos">
+      <div class="container">
+        <div class="section-header">
+          <h2>Recursos Inovadores</h2>
+          <p>
+            Descubra as funcionalidades que fazem da nossa plataforma única no
+            mercado brasileiro
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Performance Otimizada</h3>
+            <p>
+              Tecnologia de ponta para garantir velocidade e eficiência em todos
+              os dispositivos, desde smartphones até desktops.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Design Responsivo</h3>
+            <p>
+              Interface adaptável que se ajusta perfeitamente a qualquer tamanho
+              de tela, proporcionando uma experiência consistente.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌟</div>
+            <h3>Experiência 3D</h3>
+            <p>
+              Visualizações tridimensionais interativas que transformam a forma
+              como você interage com o conteúdo digital.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Segurança Avançada</h3>
+            <p>
+              Protocolos de segurança robustos para proteger seus dados e
+              garantir uma navegação segura e confiável.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">♿</div>
+            <h3>Acessibilidade Total</h3>
+            <p>
+              Desenvolvido seguindo as melhores práticas de acessibilidade,
+              garantindo uso por pessoas com diferentes necessidades.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🇧🇷</div>
+            <h3>100% Nacional</h3>
+            <p>
+              Solução desenvolvida inteiramente no Brasil, com suporte em
+              português e foco nas necessidades do mercado nacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="estatisticas">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nossos Números</h2>
+          <p>
+            Resultados que comprovam a qualidade e eficácia da nossa plataforma
+          </p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3 id="users-count">0</h3>
+            <p>Usuários Ativos</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="projects-count">0</h3>
+            <p>Projetos Realizados</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="satisfaction-count">0</h3>
+            <p>% Satisfação</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="support-count">0</h3>
+            <p>Horas de Suporte</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#inicio">Início</a>
+          <a href="#recursos">Recursos</a>
+          <a href="#estatisticas">Estatísticas</a>
+          <a href="mailto:contato@brasildigital.com">Contato</a>
+          <a href="#privacidade">Privacidade</a>
+          <a href="#termos">Termos de Uso</a>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2025 Criado por Shinzo Suzuki - Brasil Digital. Todos os direitos reservados.
+            Desenvolvido com 💚 no Brasil.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
